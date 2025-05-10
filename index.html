@@ -13,30 +13,32 @@
   </head>
   <body>
     <main class=" flex justify-center">
-      <div class="mockup-phone border-primary">
+      <div class="mockup-phone">
         <div class="mockup-phone-camera"></div>
         <div class="mockup-phone-display">
           <div class="hero bg-base-200 min-h-screen">
             <div class="hero-content flex-col lg:flex-row-reverse">
-              <div class=" rounded-3xl p-8 bg-base-100 shadow-2xl">
-                <div class="card-body">
+              <div class=" rounded-3xl p-8 bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
                   <fieldset class="fieldset">
                     <label class="label text-black font-bold text-base">Mobile Number</label>
-                    <input type="email" class="input  rounded-3xl" placeholder="Enter your number" />
+                    <input type="text" class="input  rounded-3xl" placeholder="Enter your number" />
                     <label class="label text-black font-bold text-base">4 Digit Pin</label>
                     <input
                       type="password"
                       class="input rounded-3xl"
                       placeholder="Enter 4 Digit Pin"
+                      autocomplete="off"
                     />
-                    <button class="  rounded-3xl btn btn-primary mt-4">Login</button>
+                    <button id="login-btn" class="btn btn-primary mt-4 rounded-3xl">Login</button>
                   </fieldset>
-                </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+    <script src="/js/login.js"></script>
   </body>
 </html>
