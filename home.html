@@ -12,7 +12,7 @@
     <title>Payoo Home Page</title>
   </head>
   <body>
-    <main class="flex justify-center">
+    <main class="flex justify-center mt-4">
       <div class="mockup-phone border-primary border-none">
         <div class="mockup-phone-camera bg-base-100bg-base-100"></div>
         <div class="mockup-phone-display bg-base-100 p-4">
@@ -40,13 +40,13 @@
               </p>
             </div>
             <div class="grid grid-cols-3 gap-4 mt-6">
-              <button
+              <button id=" addMoney-option"
                 class="h-20 border rounded-xl flex justify-center items-center flex-col"
               >
                 <img src="/assets/wallet1.png" alt="" />
                 <h2>Add Money</h2>
               </button>
-              <button
+              <button id="cashOut-option"
                 class="h-20 border rounded-xl flex justify-center items-center flex-col"
               >
                 <img src="/assets/send1.png" alt="" />
@@ -80,13 +80,14 @@
             <div class="divider"></div>
             <!-- From Control -->
             <div>
-              <form class="card-body">
+              <!-- Add Money -->
+              <form id="addMoney-form" class="card-body">
                 <fieldset class="fieldset">
                   <label class="label text-black font-bold text-base"
                     >Amount</label
                   >
                   <input
-                    id="money"
+                    id="add-money"
                     type="text"
                     class="input rounded-3xl"
                     placeholder=" Enter amount"
@@ -95,7 +96,7 @@
                     >4 Digit Pin</label
                   >
                   <input
-                    id="pin-number"
+                    id="pin-number1"
                     type="password"
                     class="input rounded-3xl"
                     placeholder="Enter '1234'"
@@ -108,6 +109,32 @@
                     >
                       Add Money
                     </button>
+                  </div>
+                </fieldset>
+              </form>
+              <!-- CashOut -->
+               <form hidden id="cashOut-form" class="card-body">
+                <fieldset class="fieldset">
+                  <label class="label text-black font-bold text-base"
+                    >Amount</label
+                  >
+                  <input
+                    id="cashOut-money"
+                    type="text"
+                    class="input rounded-3xl"
+                    placeholder=" Enter amount"
+                  />
+                  <label class="label text-black font-bold text-base"
+                    >4 Digit Pin</label
+                  >
+                  <input
+                    id="pin-number2"
+                    type="password"
+                    class="input rounded-3xl"
+                    placeholder="Enter '1234'"
+                    autocomplete="off"
+                  />
+                  <div class=" flex justify-center gap-4">
                     <button
                       id="cash-out-btn"
                       class="btn btn-primary btn-outline mt-4 rounded-3xl"

@@ -1,24 +1,10 @@
-// console.log('Utilities.js')
-// document.getElementById('add-money-btn').addEventListener('click', function(e){
-//     e.preventDefault();
-//     const {money, pin} = getInputData('input-add-money', 'pin-number');
-//     console.log(money, pin);
-
-// })
-// // Reusable function for getting input field data
-// function getInputData(moneyID,pinID){
-//     const inputFieldValue = document.getElementById(moneyID).value;
-//     const money = parseFloat(inputFieldValue);
-//     const pin = document.getElementById(pinID).value;
-//     return {money, pin};
-// }
 // ------------------Add Money---------------------
 document
   .getElementById("add-money-btn")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    const addMoney = getInputData("money");
-    const pinNumber = getInputData("pin-number");
+    const addMoney = getInputData("add-money");
+    const pinNumber = getInputData("pin-number1");
     const accountBalance = document.getElementById("account-valance").innerText;
     const balanceNumber = parseFloat(accountBalance);
     if (pinNumber === 1234) {
@@ -33,8 +19,8 @@ document
   .getElementById("cash-out-btn")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    const cashOut = getInputData("money");
-    const pinNumber = getInputData("pin-number");
+    const cashOut = getInputData("cashOut-money");
+    const pinNumber = getInputData("pin-number2");
     const accountBalance = document.getElementById("account-valance").innerText;
     const balanceNumber = parseFloat(accountBalance);
     if (pinNumber === 1234 && cashOut < balanceNumber) {
@@ -50,3 +36,12 @@ function getInputData(id) {
   const inputValueNumber = parseFloat(inputValue);
   return inputValueNumber;
 }
+// ------------------------------------------------
+document.getElementById('cashOut-option').addEventListener('click', function(){
+  // console.log('btn clicked')
+  const cashOutField = document.getElementById('cashOut-form');
+  cashOutField.removeAttribute('hidden');
+  const addMoneyField = document.getElementById('addMoney-form');
+  addMoneyField.setAttribute('hidden', true)
+
+})
