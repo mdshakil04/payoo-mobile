@@ -45,3 +45,9 @@ document.getElementById('cashOut-option').addEventListener('click', function(){
   addMoneyField.setAttribute('hidden', true)
 
 })
+// document.getElementById('addMoney-option').addEventListener('click', function(){
+//   const addMoneyField = document.getElementById('addMoney-form');
+//   addMoneyField.removeAttribute('hidden')
+//    const cashOutField = document.getElementById('cashOut-form');
+//    cashOutField.setAttribute('hidden', true)
+// })
